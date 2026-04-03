@@ -2,26 +2,41 @@
 ## Линейка курсов для ручного тестирования
 ```mermaid
 graph LR
-    %% 1. ОБЪЯВЛЕНИЕ ВСЕХ УЗЛОВ
-    subgraph prep1 [Первый вариант подготовки]
-        oprog-a[Основы программирования и баз данных <br>24 а.ч.]
-        bkp2[Microsoft Excel. Уровень 1 <br>16 а.ч.]
-    end
+    subgraph prep [Предварительная подготовка]
+        upPrep( )
+        subgraph prep2 [Второй вариант подготовки]
+            qa-base[Базовые IT-навыки для тестировщиков, 24 а.ч.]
+        end
 
-    subgraph prep2 [Второй вариант подготовки]
-        qa-base[Базовые IT-навыки для тестировщиков <br>24 а.ч.]
+        subgraph prep1 [Первый вариант подготовки]
+            oprog-a[<span style="white-space: nowrap;">Основы программирования</span> и баз данных, 24 а.ч.]
+            bkp2[Microsoft Excel. <br> Уровень 1, 16 а.ч.]
+        end
+        
+        %% Невидимый узел в центре блока
+        centerPrep( )
     end
     
     tpo[Тестирование ПО. Уровень 1, 40 а.ч.]
-    tpo21[Тестирование ПО. Уровень 2. Тест-дизайн <br>24 а.ч.]
-    upkot[Тестирование ПО. Уровень 2. Управление командой тестирования <br>16 а.ч.]
+    tpo21[Тестирование ПО. Уровень 2. Тест-дизайн, 24 а.ч.]
+    upkot[Тестирование ПО. Уровень 2. Управление командой тестирования, 16 а.ч.]
 
-    %% 2. ВСЕ СВЯЗИ (СТРЕЛКИ)
-    prep1 --> tpo
-    prep2 --> tpo
-
+    %% Стрелка из невидимого узла
+    centerPrep --> tpo
+    
+    %% Связываем невидимый узел с содержимым блока (невидимыми линиями)
+    upPrep ~~~ centerPrep
+    oprog-a ~~~ centerPrep
+    bkp2 ~~~ centerPrep
+    prep1 ~~~ centerPrep
+    prep2 ~~~ centerPrep
+    
     tpo --> tpo21
     tpo --> upkot
+    
+    %% Скрываем невидимый узел
+    style upPrep fill:transparent,stroke:transparent
+    style centerPrep fill:transparent,stroke:transparent
 
 ````
 

@@ -1,4 +1,23 @@
 # Курсы по тестированию и обеспечению качества
+## Легенда
+```mermaid
+graph LR
+    L1[Курсы, которые есть в линейке, но я их не веду]
+    L2[Курсы, которые есть в линейке, и я их веду]
+    L3[Новые курсы, в разработке]
+    L4[Новые курсы, сроки подготовки не определены]
+
+    classDef defaultCourse fill:#e8e2d8,stroke:#ac9c8c,stroke-width:1.5px,color:#333
+    classDef usualCourse fill:#e8f0fe,stroke:#4a90e2,stroke-width:1.5px
+    classDef newCourse fill:#ffcdd2,stroke:#d32f2f,stroke-width:2.5px,font-weight:bold
+    classDef futureCourse fill:#dfcef0,stroke:#9c7abe,stroke-width:1.5px,color:#333
+   
+    class L1 defaultCourse
+    class L2 usualCourse
+    class L3 newCourse
+    class L4 futureCourse
+````
+
 ## Существующая линейка курсов по тестированию
 ```mermaid
 graph LR
@@ -23,6 +42,15 @@ graph LR
     tpo -.->|Не обязательно| avtest
 
     dzhv1-a --> java2 --> avtest
+
+    classDef defaultCourse fill:#e8e2d8,stroke:#ac9c8c,stroke-width:1.5px,color:#333
+    classDef usualCourse fill:#e8f0fe,stroke:#4a90e2,stroke-width:1.5px
+    classDef newCourse fill:#ffcdd2,stroke:#d32f2f,stroke-width:2.5px,font-weight:bold
+    classDef futureCourse fill:#dfcef0,stroke:#9c7abe,stroke-width:1.5px,color:#333
+   
+    class oprog-a,bkp2,dzhv1-a,java2 defaultCourse
+    class tpo,tpo21,upkot,avtest usualCourse
+
 ````
 
 ## Дополнительный курс по АТ
@@ -40,14 +68,18 @@ graph LR
 
     avtest[Автоматизированное тестирование веб-приложений с использованием Selenium, 40 а.ч.]
 
-    at-api-long[Автоматизированное тестирование API, 40 а.ч.]
+    ai-qa["Инструменты искусственного интеллекта (ИИ) для тестировщиков, 16 а.ч."]
     at-api-short[Автоматизированное тестирование API, 16 а.ч.]
+
+    at-api-long[Автоматизированное тестирование API, 40 а.ч.]
 
     oprog-a --> tpo
     bkp2 --> tpo
 
+    tpo --> ai-qa
     tpo --> tpo21
     tpo --> upkot
+
 
     tpo -.->|Не обязательно| avtest
     tpo -.->|Не обязательно| at-api-long
@@ -59,6 +91,15 @@ graph LR
 
     avtest --> at-api-short
 
+    classDef defaultCourse fill:#e8e2d8,stroke:#ac9c8c,stroke-width:1.5px,color:#333
+    classDef usualCourse fill:#e8f0fe,stroke:#4a90e2,stroke-width:1.5px
+    classDef newCourse fill:#ffcdd2,stroke:#d32f2f,stroke-width:2.5px,font-weight:bold
+    classDef futureCourse fill:#dfcef0,stroke:#9c7abe,stroke-width:1.5px,color:#333
+   
+    class oprog-a,bkp2,dzhv1-a,java2 defaultCourse
+    class tpo,tpo21,upkot,avtest usualCourse
+    class at-api-short,ai-qa newCourse
+    class at-api-long futureCourse
 ````
 
 ## Линейка курсов для ручного тестирования

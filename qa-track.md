@@ -16,7 +16,7 @@ graph LR
     class L2 usualCourse
     class L3 newCourse
     class L4 futureCourse
-````
+```
 
 ## Существующая линейка курсов по тестированию
 ```mermaid
@@ -51,7 +51,7 @@ graph LR
     class oprog-a,bkp2,dzhv1-a,java2 defaultCourse
     class tpo,tpo21,upkot,avtest usualCourse
 
-````
+```
 
 ## Дополнительный курс по АТ
 ```mermaid
@@ -100,7 +100,7 @@ graph LR
     class tpo,tpo21,upkot,avtest usualCourse
     class at-api-short,ai-qa newCourse
     class at-api-long futureCourse
-````
+```
 
 ## Линейка курсов для ручного тестирования
 ```mermaid
@@ -141,7 +141,7 @@ graph LR
     style upPrep fill:transparent,stroke:transparent
     style centerPrep fill:transparent,stroke:transparent
 
-````
+```
 
 ## Линейка курсов для автоматизированного тестирования
 ```mermaid
@@ -188,4 +188,5 @@ graph LR
     %% Скрываем невидимый узел
     style centerPrep-qa fill:transparent,stroke:transparent
     style centerPrep-java fill:transparent,stroke:transparent
-````
+```
+
